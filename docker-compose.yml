@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  pandora:
+    image: pengzhile/pandora:1.1.15
+    ports:
+      - "8018:8018"
+    networks:
+      - frontend
+    volumes:
+      - db-data:/data
+    environment:
+      PANDORA_ACCESS_TOKEN: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJ6aGFuZ3poaS5qYW1lc0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sImh0dHBzOi8vYXBpLm9wZW5haS5jb20vYXV0aCI6eyJ1c2VyX2lkIjoidXNlci1MRXlmbjBmcURQcjcwOGtRS001Z1hGbHoifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDY0NTRjMTY3OGQwZjg4MDJiYjA2Y2I2YyIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2ODYxMjQ3NDcsImV4cCI6MTY4NzMzNDM0NywiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvcmdhbml6YXRpb24ud3JpdGUifQ.e501c3cG_c3Nijks4tOVWct6PkPerd47FnEzFUHmujprdLPmfomeeRJNpw9KR4xqEXupX8hPVAg5bWv6TmE1DcFtgWWsKXVel6IwVqTmxZQvcSAoqHPKOKcoAIR8GoV3-H-JBcYXmV__u3GShF2o_ZDHS44zKpoAF_HuyoCTNO48b45LjDRVyONydC-faCp8X0eY6c8-mHKMX0xfQuZLzMsXWlY9eJR5-NbvCE_duvDvCjB987nrsLBm_ruTdNemHcnGbLR9f0xjrg9qDWwohLgsRr2knx3_VK9FgUxhTRQsd5oiaNCMj76_IPrPlIepvzxW_fOha80LVTl6JFGG5w"
+      PANDORA_SERVER: "0.0.0.0:8018"
+      PANDORA_VERBOSE:
+    logging:
+      driver: "local"
+      options:
+        max-size: "200k"
+        max-file: "10"
+
+networks:
+  frontend:
+
+
+volumes:
+  db-data:
