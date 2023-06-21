@@ -1,7 +1,13 @@
 version: "3.8"
 services:
   pandora:
-    image: pengzhile/pandora:1.1.15
+    # image: pengzhile/pandora:1.1.15
+    image: pandora_xol:1.0
+    build:
+      context: .
+      args:
+        - https_proxy=http://192.168.10.195:7890
+    container_name: pandora-xol
     ports:
       - "8018:8018"
     networks:
