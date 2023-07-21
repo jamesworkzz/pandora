@@ -4277,17 +4277,6 @@
             className:
               "flex w-full items-center justify-center gap-1 border-b border-black/10 bg-gray-50 p-3 text-gray-500 dark:border-gray-900/50 dark:bg-gray-700 dark:text-gray-300",
             children: [
-              "Model: ",
-              a.title,
-              o,
-              n
-                ? (0, i.jsxs)(i.Fragment, {
-                    children: [
-                      (0, i.jsx)("span", { className: "px-1", children: "•" }),
-                      n,
-                    ],
-                  })
-                : null,
             ],
           });
         },
