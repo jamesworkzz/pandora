@@ -4577,8 +4577,6 @@
                     }),
                     (0, i.jsxs)(rr, {
                       children: [
-                        "ChatGPT",
-                        P && (0, i.jsx)(tI, { children: "Plus" }),
                       ],
                     }),
                   ],
