@@ -6,7 +6,28 @@
     {
       "label": "docker compose build",
       "type": "shell",
-      "command": "docker compose build --progress=plain"
+      "command": "docker compose build --progress=plain pandora"
+    },
+    {
+      "label": "docker tag",
+      "type": "shell",
+      "command": "docker tag pandora_xol:1.0 192.168.10.214:5000/pandora_xol:1.1"
+      // "command": "docker tag pandora_xol:1.0 101.201.81.108:6073/pandora_xol:1.1"
+      // "command": "docker tag pandora_xol:1.0 101.201.81.108:5000/pandora_xol:1.1"
+    },
+    {
+      "label": "docker push",
+      "type": "shell",
+      "command": "docker push 192.168.10.214:5000/pandora_xol:1.1",
+      // "command": "docker push 101.201.81.108:6073/pandora_xol:1.1",
+      // "command": "docker push 101.201.81.108:5000/pandora_xol:1.1",
+      "dependsOn": [
+        "docker tag"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
