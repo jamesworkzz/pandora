@@ -3243,15 +3243,7 @@
                     " mode",
                   ],
                 }),
-              m,
-              (0, i.jsxs)(n5, {
-                href: "https://github.com/pengzhile/pandora",
-                target: "_blank",
-                children: [
-                  (0, i.jsx)(b.ZP, { icon: E.AlO }),
-                  "Pandora on GitHub",
-                ],
-              }),
+              m
             ],
           }),
         });
