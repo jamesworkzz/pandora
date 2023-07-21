@@ -4195,18 +4195,7 @@
         return (0, i.jsxs)("div", {
           className: "flex items-center justify-center gap-2",
           children: [
-            (0, i.jsx)(tD, {
-              onChangeModelSetting: t,
-              availableModels: r,
-              modelBackend: a,
-            }),
-            o.has("tools3") &&
-              (null == s
-                ? void 0
-                : null === (n = s.enabledTools) || void 0 === n
-                ? void 0
-                : n.includes("tools3")) &&
-              (0, i.jsx)(tF, {}),
+          
           ],
         });
       }
